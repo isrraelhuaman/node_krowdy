@@ -2,7 +2,7 @@ const restify = require('restify');
 const server = restify.createServer(); //Para crear el createServer
 
 //settings
-server.use(restify.plugins.acceptParser())
+server.use(restify.plugins.acceptParser(server.acceptable))
 server.use(restify.plugins.queryParser())
 server.use(restify.plugins.bodyParser())
 
